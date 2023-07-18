@@ -12,6 +12,8 @@ import org.utility.BaseClass;
 
 public class ProductSearch extends BaseClass {
 	
+	Homepage hp ;
+	
 	@BeforeClass
 	private void startApplication() {
 		launchApplication("chrome", "https://www.amazon.in/", 10);
@@ -25,7 +27,7 @@ public class ProductSearch extends BaseClass {
 	}
 	@Test
 	private void searchProduct() {
-		Homepage hp = new Homepage();
+	    hp = new Homepage();
 		sendkeys(hp.getTxtSearch(),"iphone");
 		btnClick(hp.getBtnSearch());
 
